@@ -1,0 +1,24 @@
+{% extends 'gallery/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="page-heading">
+    <div class="container">
+        <div class="heading-content">
+            <h1><em>{{ title }}</em></h1>
+        </div>
+    </div>
+    <div class="content-section">
+        <form method="POST" action="" enctype="multipart/form-data" class="form-gallery">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="legend">Gallery ArtManAfrica</legend>
+                {{ form | crispy  }}
+               
+            <div class="form-group">
+                <button class="gallery-submit" type="submit">Post</button>
+            </div>
+            
+        </form>
+    </div>
+{% endblock %}

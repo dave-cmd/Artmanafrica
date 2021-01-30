@@ -1,0 +1,31 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="page-heading">
+    <div class="container">
+        <div class="heading-content">
+            <h1><em>{{ title }}</em></h1>
+        </div>
+    </div>
+</div>
+
+    <div class="content-section">
+        <form method="POST" action="" class="form-gallery">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="legend">Register ArtManAfrica</legend>
+                {{ form | crispy  }}
+               
+            <div class="form-group">
+                <button class="gallery-submit" type="submit">Register</button>
+            </div>
+            <div class="form-group">
+                <small class="text-muted">
+                    Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Login</a>
+                </small>
+            </div>
+        </form>
+    </div>
+    
+{% endblock content %}

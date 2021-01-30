@@ -1,0 +1,57 @@
+
+{% extends 'gallery/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="video-container">
+    <div class="video-overlay"></div>
+    <div class="video-content">
+        <div class="inner">
+          <h1>Welcome to <em>ArtManAfrica</em></h1>
+          <p>Simple. Immersive. Elegant</p>
+          <p>The home of African Art</p>
+            <div class="scroll-icon">
+                <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="{% static 'img/scroll-icon.png' %}" alt=""></a>
+            </div>    
+        </div>
+    </div>
+    <video autoplay="" loop="" muted>
+        <source src="{% static 'highway-loop.mp4' %}" type="video/mp4" />
+    </video>
+</div>
+
+
+<div class="full-screen-portfolio" id="portfolio">
+    <div class="container-fluid">
+    {% if posts %}
+        {% for post in page_obj %}
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="{{ post.art.url }}" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>{{post.title1}} <em>{{ post.title2}}</em></h1>
+                                <p>{{post.subtitle}}</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="{{ post.art.url }} ">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
+{% if page_obj.has_next %}
+    <div class="grid-portfolio">
+        <div class="load-more-button">
+            <a href="?page={{ page_obj.next_page_number }}">Load More</a>
+        </div>
+    </div>
+{% endif %}
+
+{% endblock %}
+

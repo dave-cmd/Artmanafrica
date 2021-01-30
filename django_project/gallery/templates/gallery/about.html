@@ -1,0 +1,97 @@
+{% extends 'gallery/base.html' %}
+{% load static %}
+{% block content %}
+<div class="page-heading">
+    <div class="container">
+        <div class="heading-content">
+            <h1><em>{{ title }}</em></h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="services">
+    <div class="container">
+        <div class="about-into">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'img/service_5.png' %}" alt="">
+                </div>
+                <div class="text">
+                    <h4>Background</h4>
+                    <p >“Our earliest childhood memories are carried with us and shape our life’s journeys,” says
+                        Bernard Ndichu Njuguna. Njuguna was born in 1979 and grew up in the Central Highlands of Kenya surrounded by scenic
+                        landscapes and beauty, and now pursues his art full-time in Nairobi.  His childhood memories
+                        have shaped and provide inspiration for his art works.
+                         
+                    </p>
+                    <p>
+                        Often the images portrayed of Africa are of the malnourished children, never-ending conflict
+                        and misery.  Yet for all this, the continent exudes vibrancy and joy.  This is the side of Africa
+                        which Njuguna explores and documents in his paintings. He works with a variety of materials to recreate everyday scenes and experiences, lending truth
+                        to the feeling that a sunset is never the same.  His paintings are inspired by nature, feelings,
+                        music, and to a greater extent the beauty of humanity.
+                    </p>
+                    <p>
+                        He mainly works with acrylics, oils and watercolors.  In a bid to make use of what is in his
+                        environment, he also experiments with recycled materials in plastic and aluminum to create
+                        decorative sculptures.  This also doubles as an effort to clean up pollution caused by dumping. 
+                        In recent years, he has been working on a line of greeting cards that advocate a cleaner world.
+                    </p>
+                    <p>
+                        Njuguna never studied art formally, but he had a chance to take it as a special subject in both
+                        primary and high school. These two institutions provided for his initial skills in art.
+                        Professionally, he pursued marketing in college, but after two years decided to follow his calling
+                        for art. His initial works were exhibited at Artz gallery in Nairobi in 2003 and he has since sold
+                        his paintings worldwide. Galleries like <strong> Amazwi, Dumela, Inside African Art, Artz </strong> and
+                        <strong> Collectors Den</strong> have played a big role in exposing his work to the world art market.
+                    </p>
+                    <p>As much he has shared his creativity with many wonderful people in the world, reputable
+                        institution have played a role in appreciating his works.
+                        Notably <strong>Caine Prize</strong> which used his painting <strong>And Sings My Soul</strong> for their 11 th edition book
+                        cover in 2010,<strong> Foundation for Healthy Africa</strong> for their logo, from his painting <strong>Reflection of Joy</strong>
+                        among others.
+                    </p>
+                    <p>Over Covid time, Njuguna has taken his time to consolidate his poetry which he has written over
+                        time noting that poetry is a great way of interpreting and documenting facts of life. He hopes to
+                        have them published sometime in the future.
+                    </p>
+                    <p>Growing up in a fast modernizing Africa, the artist has observed a myriad of challenges facing
+                        his generation. An increased world population has brought with it climate changes diseases,
+                        economic imbalances and human conflicts. 
+                        As a result, people are coming up with creative innovations that are solving emerging problems
+                        in a great way.
+                    </p>
+                    <p>It is in this spirit he has designed a <strong>thermo seat</strong> for arthritis patients. It was inspired by his
+                        mother’s condition. He is also experimenting with agricultural farm waste to create cooking fuel
+                        that will slow down de-afforestation in his country.
+                        Njuguna hopes the people of Africa will not forget their past and will celebrate their tradition
+                        with future generations.</p>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+
+<div class="more-about-us">
+    <div class="container">
+        <div class="col-md-5 col-md-offset-7">
+            <div class="content">
+                <h2>Bernard Ndichu Njuguna</h2>
+                <span>semi abstract artist</span>
+                <p>
+                    Art is an infinite safari. As infinite as the power of curiosity.
+                <br><br></p>
+                <div class="simple-btn">
+                    <a href="{% url 'home' %}">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
